@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		
+		<title>Smith Safety Gear Online Store Header</title>
+		
+		<style>
+		
+		.makeithover a:hover {
+		 background-color: white;
+		 color: black;
+		}
+		
+		.makeithover a {
+		float: left;
+		color: black;
+		text-align: center;
+		padding: 2px 6px;
+		text-decoration: none;
+		font-size: 16px;
+		font-family:OCR A Std;
+		}
+		
+		</style>
+	
+	</head>
+	
+	<body>
+		
+		<header>
+		
+			<div style="background-color: #FFD365; height: 60px; width: 80%; float: left; padding-top: 10px; padding-left: 10.66px">
+			
+			<a href="ssgos_aboutus.php"><img src="picture/thirdlogo.png" height="50" width="250" alt="Smith Safey Gear Online Store logo" align="left"></a>
+					
+			<nav class="makeithover" style="font-size: 13.8px; padding-top: 14px; padding-left: 300px">
+			
+				<a href="ssgos_homepage.php" style="text-decoration: none">Home Page</a>
+				<a href="ssgos_register.php" style="padding-left: 30px; text-decoration: none">Register</a>
+				<a href="ssgos_signin.php" style="padding-left: 30px; text-decoration: none">Sign In</a>
+				<a href="ssgos_shoppingcart.php" style="padding-left: 30px; text-decoration: none">Shopping Cart</a>
+				<a href="ssgos_contactus.php" style="padding-left: 30px; text-decoration: none">Contact Us</a>
+				<a href="ssgos_aboutus.php" style="padding-left: 30px; text-decoration: none">About Us</a>
+				<a href="ssgos_careers.php" style="padding-left: 30px; text-decoration: none">Careers</a>
+				<a href="ssgos_regionalsettings.php" style="padding-left: 30px; text-decoration: none">Regional Settings</a>
+							
+			</nav>
+
+			</div>
+								
+			<div align="center" style="text-align: center; width: 19.3%; background-color: #FFD365; float: right; height: 60px; padding-top: 10px">
+				
+				<?php
+					
+					date_default_timezone_set('Asia/Kuala_Lumpur');
+					$date = date("d-m-y");
+					$time = date("h:i:s A");
+					
+					echo "<strong>";
+					echo "Today date: $date";
+					echo "<br>Access time: $time";
+					echo "</strong><br>";
+					
+					if ( isset($_COOKIE['country']) ) {
+				
+						echo $_COOKIE['country']; 
+						echo "&nbsp&nbsp";
+				
+					}
+					
+					echo " // ";
+				
+					if ( isset($_COOKIE['language']) ) {
+				
+						echo $_COOKIE['language'];
+						echo "&nbsp&nbsp";
+				
+					}
+					
+					echo " // ";
+				
+					if ( isset($_COOKIE['currency']) ) {
+				
+						echo $_COOKIE['currency'];
+						echo "&nbsp&nbsp";
+				
+					}
+				
+				?>
+					
+			</div>
+		
+		</header>
+		
+	</body>
+	
+</html>
